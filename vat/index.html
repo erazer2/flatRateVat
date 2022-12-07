@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+
+    <link id="styleToUse" rel="stylesheet" href="simpleStyle.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat Rate Vat Calc</title>
+    <script src="interface.js"></script>
+    <script src="calculations.js"></script>
+
+    
+</head>
+<body>
+
+<div id="menu"> 
+
+</div>    
+
+
+<div id="mainCalculatorBox">
+
+    <h2 id="mainHeader">Flat Rate Vat Calc</h2>
+    
+  
+
+    <div id="calculationsBit">
+
+        <div id="calculatorBrief">See if Flat Rate is better for you
+
+<div id="inputsPart">
+
+ 
+<hr style="width:50%">
+
+<div id="TimerSection">
+  
+    
+    <div class="inputTitle">Turn Over Pre Vat</div>
+    <input class="dataEntryBox" id="turnover" value="80000"></input>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+
+    <div class="inputTitle">Gross Vat Rate</div>
+    <input class="dataEntryBox" value="20" id="grossVat"></input>
+    <div class="unitsTitle">%</div> 
+    <br>
+
+    <div class="inputTitle">Flat Vat Rate</div>
+    <input class="dataEntryBox" value="9.5" id="flatRate"></input>
+    <div class="unitsTitle">%</div> 
+    <br>
+
+
+
+    <div class="inputTitle">Flat Rate Advantage After Capital Goods Spend</div>
+    <div class="dataEntryBox" id="postCapitalGoods"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+<div onclick="revealClicked();"id="reveal">Show Details</div>
+
+<br>
+
+    <div id="details">
+
+    <div class="inputTitle">Turn Over Post Vat</div>
+    <div class="dataEntryBox" id="postVatTurnover"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+    <div class="inputTitle">Flat Rate Vat Payable</div>
+    <div class="dataEntryBox" id="flatRatePayable"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+    <div class="inputTitle">Flat Rate Vat Advantage</div>
+    <div class="dataEntryBox" id="flatRateAdvantage"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+
+    
+    <div class="inputTitle">Capital Goods Spend to maintain Flat Rate</div>
+    <div class="dataEntryBox" id="capitalGoods"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+
+
+
+    <div class="inputTitle">Vatable items to buy before disadvantage</div>
+    <div class="dataEntryBox" id="itemsToBuy"></div>
+    <div class="unitsTitle">GBP</div> 
+    <br>
+
+</div>
+
+    
+</div>
+
+
+
+
+
+
+</div>
+
+
+ 
+
+
+</div>
+
+<br>
+
+
+
+
+
+</body>
+<script>
+ 
+ 
+
+ document.getElementById("turnover").addEventListener("keyup",calcGrossVat);
+ document.getElementById("grossVat").addEventListener("keyup",calcGrossVat);
+ document.getElementById("flatRate").addEventListener("keyup",calcGrossVat);
+
+ 
+ calcGrossVat();
+ hideDetails();
+
+
+</script>
+
+</html>
